@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Achados no AliExpress — Pesca, Livros e Cozinha</title>
+  <meta name="description" content="Vitrine com os produtos que eu uso e recomendo no AliExpress: pesca, livros e material de cozinha. Clique e compre direto no app.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Meus Achados no AliExpress">
+  <meta property="og:description" content="Pesca, livros e cozinha — os produtos que eu recomendo, com link direto pro AliExpress.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#E62E04">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#topo" class="brand" aria-label="Início">
+        <img src="assets/logo.svg" alt="" width="30" height="30">
+        <span class="brand__name" id="brandName">Meus Achados</span>
+      </a>
+      <a class="btn btn--ghost btn--small" id="headerLoja" href="#" target="_blank" rel="noopener sponsored">Ver loja</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO / PERFIL ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__floaties" aria-hidden="true">
+        <span class="floaty f1"></span>
+        <span class="floaty f2"></span>
+        <span class="floaty f3"></span>
+        <span class="floaty f4"></span>
+      </div>
+      <div class="container hero__inner">
+        <div class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 16h22l-2.5 20h-17L14 16Z"/><path d="M19 16a5 5 0 0 1 10 0"/>
+          </svg>
+        </div>
+        <h1 id="hero-title"><span class="float-text" id="perfilNome">Meus Achados</span></h1>
+        <p class="hero__bio" id="perfilBio">Produtos que eu uso e recomendo ❤️</p>
+        <div class="hero__actions">
+          <a class="btn" id="heroLoja" href="#" target="_blank" rel="noopener sponsored">Ver tudo no AliExpress</a>
+          <a class="btn btn--ghost" id="heroInsta" href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BUSCA + FILTROS ===== -->
+    <section class="section section--filters" aria-label="Filtros">
+      <div class="container">
+        <div class="search">
+          <svg class="search__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="busca">Buscar produto</label>
+          <input type="search" id="busca" placeholder="Buscar produto…" autocomplete="off">
+        </div>
+
+        <div class="filters" id="filtros" role="tablist" aria-label="Categorias">
+          <!-- gerado por js/main.js a partir de CATEGORIAS -->
+        </div>
+
+        <div class="subfilters" id="subfiltros" hidden aria-label="Subcategorias">
+          <!-- gerado por js/main.js quando a categoria tem subs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GRADE DE PRODUTOS ===== -->
+    <section class="section section--grid" aria-labelledby="produtos-title">
+      <div class="container">
+        <div class="grid__head">
+          <h2 id="produtos-title">Produtos</h2>
+          <p class="grid__count" id="contador" role="status" aria-live="polite"></p>
+        </div>
+        <div class="grid" id="grade">
+          <!-- gerado por js/main.js a partir de PRODUTOS -->
+        </div>
+        <div class="empty" id="vazio" hidden>
+          <p class="empty__emoji" aria-hidden="true">🛒</p>
+          <p class="empty__title">Novidades chegando por aqui!</p>
+          <p class="empty__sub">Ainda não tem produto nessa categoria. Me segue no Instagram pra não perder.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#topo" class="brand brand--footer" aria-label="Voltar ao topo">
+        <img src="assets/logo.svg" alt="" width="28" height="28">
+        <span class="brand__name" id="brandNameFooter">Meus Achados</span>
+      </a>
+      <a class="footer__ig" id="footerInsta" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        <span id="footerIgLabel">@seuperfil</span>
+      </a>
+      <p class="footer__disc">Esta página contém links de afiliado. Ao comprar por eles, eu posso receber uma comissão — sem custo nenhum a mais pra você. ❤️</p>
+      <small>© <span id="ano"></span> · Feito para divulgar produtos do AliExpress. Site independente, não oficial.</small>
+    </div>
+  </footer>
+
+  <!-- ===== CARRINHO QUE ANDA COM O SCROLL ===== -->
+  <div class="walker" id="walker" aria-hidden="true">
+    <svg class="walker__cart" viewBox="0 0 120 90" width="88" height="66">
+      <g class="cart-body">
+        <path d="M14 16h14l12 46h48" stroke="#E62E04" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M32 26h60l-8 28H40L32 26Z" fill="#E62E04"/>
+        <path class="cart-pack p1" d="M46 12h16v14H46z" fill="#FFB800"/>
+        <path class="cart-pack p2" d="M68 6h14v20H68z" fill="#FF9A3D"/>
+      </g>
+      <circle class="wheel" cx="48" cy="76" r="9" fill="#3A2420"/>
+      <circle class="wheel" cx="86" cy="76" r="9" fill="#3A2420"/>
+      <circle cx="48" cy="76" r="3.4" fill="#fff"/>
+      <circle cx="86" cy="76" r="3.4" fill="#fff"/>
+    </svg>
+  </div>
+
+  <script src="js/vendor/anime.umd.min.js" defer></script>
+  <script src="js/produtos.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/walker.js" defer></script>
+</body>
+</html>
